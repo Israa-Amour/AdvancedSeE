@@ -3,7 +3,6 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const bodyParser = require("body-parser");
-var alert = require('alert');
 app.use(bodyParser.json());
 //
 const fs = require('fs');
@@ -36,8 +35,6 @@ app.get('/db/files', (req, res) => {
     })
 });
 ////////////////////////////
- 
-//use express static folder
 app.use(express.static("./public"))
  
 // body-parser middleware use
@@ -74,12 +71,12 @@ var upload = multer({
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
- 
+
+//@type   POST
 // upload csv to database
-app.post('', upload.single("uploadfile"), (req, res) =>{
+app.post('/uploadfile', upload.single("uploadfile"), (req, res) =>{
     UploadCsvDataToMySQL(__dirname + '/uploads/' + req.file.filename);
-   
-}).subscribe();
+});
  
 function UploadCsvDataToMySQL(filePath){
     let stream = fs.createReadStream(filePath);
@@ -111,8 +108,6 @@ function UploadCsvDataToMySQL(filePath){
         });
   
     stream.pipe(csvStream);
-    console.warn("data Saved");
-    alert("data Saved int db")
 }
  
 //create connection
