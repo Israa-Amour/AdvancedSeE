@@ -3,6 +3,8 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const bodyParser = require("body-parser");
+const Importer = require('mysql-import');
+const importer = new Importer({host, user, password, database});
 app.use(bodyParser.json());
 //
 const fs = require('fs');
@@ -73,7 +75,6 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
  
-//@type   POST
 // upload csv to database
 app.post('/uploadfile', upload.single("uploadfile"), (req, res) =>{
     UploadCsvDataToMySQL(__dirname + '/uploads/' + req.file.filename);
@@ -118,26 +119,3 @@ app.listen(PORT, () => console.log(`Server is running at port ${PORT}`))
 
 
 
-
-
-
-/*var csvParser = require('csv').parse;
-
-var filePath ="uploads\\addresses.csv";
-fs.readFile(filePath, {
-  encoding: 'utf-8'
-}, function(err, csvData) {
-  if (err) {
-    console.log(err);
-  }
-
-  csvParser(csvData, {
-    delimiter: ','
-  }, function(err, data) {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log(data);
-    }
-  });
-});*/
