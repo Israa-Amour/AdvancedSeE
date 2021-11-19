@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 var mysqlConnection = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "3amourisraa",
+    password: "shada1402BANA",
     database: "dbmanager",
     multipleStatements: true
 })
@@ -23,6 +23,7 @@ app.listen(3000, () => console.log("Server is on port 3000"));
 app.get('/db/files', (req, res) => {
     mysqlConnection.query('SELECT * FROM files', (err, rows, fields) => {
         if (!err)
+        
             res.send(rows)
         else
             console.log(err);
