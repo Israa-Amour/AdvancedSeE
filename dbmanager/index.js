@@ -3,14 +3,14 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const bodyParser = require("body-parser");
-const Importer = require('mysql-import');
-const importer = new Importer({host, user, password, database});
+var alert = require('alert');
 app.use(bodyParser.json());
 //
 const fs = require('fs');
 const csv = require('fast-csv');
 const multer = require('multer')
 const path = require('path')
+//const popup = require('node-popup');
 //require for our db module 
 
 var db = mysql.createConnection({
@@ -76,10 +76,10 @@ app.get('/', (req, res) => {
 });
  
 // upload csv to database
-app.post('/uploadfile', upload.single("uploadfile"), (req, res) =>{
+app.post('', upload.single("uploadfile"), (req, res) =>{
     UploadCsvDataToMySQL(__dirname + '/uploads/' + req.file.filename);
-    console.log('CSV file data has been uploaded in mysql database ' + err);
-});
+   
+}).subscribe();
  
 function UploadCsvDataToMySQL(filePath){
     let stream = fs.createReadStream(filePath);
@@ -111,6 +111,8 @@ function UploadCsvDataToMySQL(filePath){
         });
   
     stream.pipe(csvStream);
+    console.warn("data Saved");
+    alert("data Saved int db")
 }
  
 //create connection
