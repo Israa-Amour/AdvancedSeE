@@ -3,7 +3,6 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const bodyParser = require("body-parser");
-
 app.use(bodyParser.json());
 //
 const fs = require('fs');
@@ -36,9 +35,17 @@ app.get('/db/files', (req, res) => {
             console.log(err);
     })
 });
+app.get('/db/user', (req, res) => {
+    db.query('SELECT * FROM user', (err, rows, fields) => {
+        if (!err)
+        
+            res.send(rows)
+        else
+            console.log(err);
+    })
+});
+
 ////////////////////////////
- 
-//use express static folder
 app.use(express.static("./public"))
  
 // body-parser middleware use
@@ -75,13 +82,15 @@ var upload = multer({
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
- 
+
+//@type   POST
 // upload csv to database
-app.post('', upload.single("uploadfile"), (req, res) =>{
+app.post('/uploadfile', upload.single("uploadfile"), (req, res) =>{
     UploadCsvDataToMySQL(__dirname + '/uploads/' + req.file.filename);
+
    
 })
- 
+
 function UploadCsvDataToMySQL(filePath){
     let stream = fs.createReadStream(filePath);
     let csvData = [];
@@ -99,7 +108,7 @@ function UploadCsvDataToMySQL(filePath){
                 if (error) {
                     console.error(error);
                 } else {
-                    let query = 'INSERT INTO files (File_ID, File_Name) VALUES ?';
+                    let query = 'INSERT INTO files (File_Name) VALUES ?';
                     db.query(query, [csvData], (error, response) => {
                         console.log(error || response);
                     });
@@ -112,13 +121,15 @@ function UploadCsvDataToMySQL(filePath){
         });
   
     stream.pipe(csvStream);
+
     console.warn("data Saved");
 
-}
+
+
+    //////////////////////
+
+
  
 //create connection
 const PORT = process.env.PORT || 8000
-app.listen(PORT, () => console.log(`Server is running at port ${PORT}`))
-
-
-
+app.listen(PORT, () => console.log(`Server is running at port ${PORT}`))}
