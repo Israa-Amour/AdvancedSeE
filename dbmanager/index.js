@@ -15,7 +15,7 @@ const path = require('path')
 var db = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "0096612122255",
+    password: "shada1402BANA",
     database: "dbmanager",
     multipleStatements: true
 })
@@ -29,11 +29,22 @@ app.listen(3000, () => console.log("Server is on port 3000"));
 app.get('/db/files', (req, res) => {
     db.query('SELECT * FROM files', (err, rows, fields) => {
         if (!err)
+        
             res.send(rows)
         else
             console.log(err);
     })
 });
+app.get('/db/user', (req, res) => {
+    db.query('SELECT * FROM user', (err, rows, fields) => {
+        if (!err)
+        
+            res.send(rows)
+        else
+            console.log(err);
+    })
+});
+
 ////////////////////////////
 app.use(express.static("./public"))
  
@@ -76,8 +87,10 @@ app.get('/', (req, res) => {
 // upload csv to database
 app.post('/uploadfile', upload.single("uploadfile"), (req, res) =>{
     UploadCsvDataToMySQL(__dirname + '/uploads/' + req.file.filename);
-});
- 
+
+   
+})
+
 function UploadCsvDataToMySQL(filePath){
     let stream = fs.createReadStream(filePath);
     let csvData = [];
@@ -95,7 +108,7 @@ function UploadCsvDataToMySQL(filePath){
                 if (error) {
                     console.error(error);
                 } else {
-                    let query = 'INSERT INTO files (File_ID, File_Name) VALUES ?';
+                    let query = 'INSERT INTO files (File_Name) VALUES ?';
                     db.query(query, [csvData], (error, response) => {
                         console.log(error || response);
                     });
@@ -108,11 +121,18 @@ function UploadCsvDataToMySQL(filePath){
         });
   
     stream.pipe(csvStream);
-}
+
+    console.warn("data Saved");
+
+
+
+    //////////////////////
+
+
  
 //create connection
 const PORT = process.env.PORT || 8000
-app.listen(PORT, () => console.log(`Server is running at port ${PORT}`))
+app.listen(PORT, () => console.log(`Server is running at port ${PORT}`))}
 
 
 
