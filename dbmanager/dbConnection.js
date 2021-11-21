@@ -5,7 +5,7 @@ const mysqlc=require("mysql2");
 const db_connection = mysqlc.createConnection({
         host:"localhost",
         user:"root",
-        password:"3amourisraa",
+        password:"shada1402BANA",
         database:"dbmanager"
 
 
