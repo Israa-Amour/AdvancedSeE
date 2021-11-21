@@ -4,13 +4,11 @@ const cors = require('cors');
 const app = express();
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
-//
 const fs = require('fs');
 const csv = require('fast-csv');
 const multer = require('multer')
 const path = require('path')
 //const popup = require('node-popup');
-//require for our db module 
 const db = require('./dbConnection');
 const { register } = require('./controllers/registerController');
 const routes = require('./routes');
@@ -43,9 +41,32 @@ app.get('/db/user', (req, res) => {
     })
 });
 
-////////////////////////////
+//Delete According to file ID 
+app.delete('/db/files/delete/:id',(req,res)=>{
+     db.query("DELETE FROM files WHERE File_ID = ?", [req.body.File_ID], (err, rows, fields) => {
+        if (!err)
+            res.send(rows);
+        else
+            console.log(err);
+    }); 
+ });
+//Adding new file 
+app.post('/db/files/add', (req, res) => {
+    db.query("INSERT INTO files(File_Name) values (?)", [req.body.File_Name], (err, rows, fields) => {
+        if (!err)
+            res.send(rows);
+        else
+            console.log(err);
+    });
+});
+//update due id to file name 
+app.put('/db/files/update', (req, res) => {
+    let sql = "UPDATE files SET File_Name = ?  WHERE File_ID = ? ";
+    db.query(sql, [req.body.File_Name, req.body.File_ID]);
+    res.status(200).json("row edited");
+});
+
 app.use(express.static("./public"))
- 
 // body-parser middleware use
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
@@ -122,11 +143,7 @@ function UploadCsvDataToMySQL(filePath){
 
     console.warn("data Saved");
 
-
-
-    //////////////////////
 //// register and log in
-
     // Handling Errors
     app.use((err, req, res, next) => {
         // console.log(err);
