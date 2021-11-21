@@ -13,6 +13,11 @@ const { register } = require('./controllers/registerController');
 const routes = require('./routes');
 app.use(express.json());
 app.use(routes);
+const logger = require('./logger')
+
+
+logger.warn('text warn')
+logger.error('text error')
 
 db.connect((err) => {
     if (!err)
@@ -155,7 +160,7 @@ function UploadCsvDataToMySQL(filePath){
         });
     });
     
- 
+
 //create connection
 const PORT = process.env.PORT || 8000
 app.listen(PORT, () => console.log(`Server is running at port ${PORT}`))
