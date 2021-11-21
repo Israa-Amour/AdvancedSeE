@@ -11,14 +11,12 @@ const multer = require('multer')
 const path = require('path')
 //const popup = require('node-popup');
 //require for our db module 
+const db = require('./dbConnection');
+const { register } = require('./controllers/registerController');
+const routes = require('./routes');
+app.use(express.json());
+app.use(routes);
 
-var db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "shada1402BANA",
-    database: "dbmanager",
-    multipleStatements: true
-})
 db.connect((err) => {
     if (!err)
         console.log('DB Connected');
@@ -127,8 +125,18 @@ function UploadCsvDataToMySQL(filePath){
 
 
     //////////////////////
+//// register and log in
 
-
+    // Handling Errors
+    app.use((err, req, res, next) => {
+        // console.log(err);
+        err.statusCode = err.statusCode || 500;
+        err.message = err.message || "Internal Server Error";
+        res.status(err.statusCode).json({
+          message: err.message,
+        });
+    });
+    
  
 //create connection
 const PORT = process.env.PORT || 8000
