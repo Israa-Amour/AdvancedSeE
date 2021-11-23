@@ -8,12 +8,16 @@ const fs = require('fs');
 const csv = require('fast-csv');
 const multer = require('multer')
 const path = require('path')
-//const popup = require('node-popup');
 const db = require('./dbConnection');
 const { register } = require('./controllers/registerController');
 const routes = require('./routes');
 app.use(express.json());
 app.use(routes);
+const logger = require('./logger')
+
+
+logger.warn('text warn')
+logger.error('text error')
 
 db.connect((err) => {
     if (!err)
@@ -143,6 +147,12 @@ function UploadCsvDataToMySQL(filePath){
 
     console.warn("data Saved");
 
+
+//create connection
+const PORT = process.env.PORT || 8000
+app.listen(PORT, () => console.log(`Server is running at port ${PORT}`))
+}
+
 //// register and log in
     // Handling Errors
     app.use((err, req, res, next) => {
@@ -154,7 +164,4 @@ function UploadCsvDataToMySQL(filePath){
         });
     });
     
- 
-//create connection
-const PORT = process.env.PORT || 8000
-app.listen(PORT, () => console.log(`Server is running at port ${PORT}`))}
+

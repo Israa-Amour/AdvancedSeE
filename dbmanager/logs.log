@@ -1,0 +1,24 @@
+{
+  message: 'text warn',
+  level: 'warn',
+  service: 'user-service',
+  timestamp: '2021-11-21T19:18:53.813Z'
+}
+{
+  message: 'text error',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2021-11-21T19:18:53.816Z'
+}
+{
+  message: 'text warn',
+  level: 'warn',
+  service: 'user-service',
+  timestamp: '2021-11-21T19:44:32.823Z'
+}
+{
+  message: 'text error',
+  level: 'error',
+  service: 'user-service',
+  timestamp: '2021-11-21T19:44:32.836Z'
+}
