@@ -16,14 +16,12 @@ app.use(routes);
 const logger = require('./logger')
 
 
-logger.warn('text warn')
-logger.error('text error')
-
 db.connect((err) => {
     if (!err)
         console.log('DB Connected');
     else
         console.log(err);
+        logger.log({ level: "error", message: err });
 });
 app.listen(3000, () => console.log("Server is on port 3000"));
 app.get('/db/files', (req, res) => {
@@ -33,7 +31,11 @@ app.get('/db/files', (req, res) => {
             res.send(rows)
         else
             console.log(err);
+            logger.log({ level: "error", message: err });
+
     })
+ logger.log({ level: "info", message: "get files from db" });
+
 });
 app.get('/db/user', (req, res) => {
     db.query('SELECT * FROM user', (err, rows, fields) => {
@@ -42,7 +44,9 @@ app.get('/db/user', (req, res) => {
             res.send(rows)
         else
             console.log(err);
+            logger.log({ level: "error", message: err });
     })
+    logger.log({ level: "info",   message: "get user from db" });;
 });
 
 //Delete According to file ID 
@@ -53,21 +57,27 @@ app.delete('/db/files/delete/:id',(req,res)=>{
         else
             console.log(err);
     }); 
+    logger.log({ level: "info", message: "delete" }); 
  });
 //Adding new file 
 app.post('/db/files/add', (req, res) => {
     db.query("INSERT INTO files(File_Name) values (?)", [req.body.File_Name], (err, rows, fields) => {
         if (!err)
             res.send(rows);
-        else
+        else{
             console.log(err);
+            logger.log({ level: "error", message: err });
+        }
     });
+    logger.log({ level: "info", message: req.body });
 });
 //update due id to file name 
 app.put('/db/files/update', (req, res) => {
     let sql = "UPDATE files SET File_Name = ?  WHERE File_ID = ? ";
     db.query(sql, [req.body.File_Name, req.body.File_ID]);
     res.status(200).json("row edited");
+    logger.log({ level: "info", message: req.body }); 
+
 });
 
 app.use(express.static("./public"))
@@ -80,6 +90,7 @@ app.use(bodyParser.urlencoded({
  
 db.connect(function (err) {
     if (err) {
+        logger.log({ level: "error", message: err.message });
         return console.error('error: ' + err.message);
     }
     console.log('Connected to the MySQL server.');
@@ -93,20 +104,19 @@ var storage = multer.diskStorage({
     filename: (req, file, callBack) => {
         callBack(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
     }
+    
 })
  
 var upload = multer({
     storage: storage
 });
  
-//! Routes start
  
 //route for Home page
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
-//@type   POST
 // upload csv to database
 app.post('/uploadfile', upload.single("uploadfile"), (req, res) =>{
     UploadCsvDataToMySQL(__dirname + '/uploads/' + req.file.filename);
@@ -134,6 +144,8 @@ function UploadCsvDataToMySQL(filePath){
                     let query = 'INSERT INTO files (File_Name) VALUES ?';
                     db.query(query, [csvData], (error, response) => {
                         console.log(error || response);
+                        logger.log({ level: "error", message: error });
+
                     });
                 }
             });
@@ -162,6 +174,7 @@ app.listen(PORT, () => console.log(`Server is running at port ${PORT}`))
         res.status(err.statusCode).json({
           message: err.message,
         });
+        logger.log({ level: "info", message: req.body });
     });
     
 

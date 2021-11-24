@@ -1,24 +1,12 @@
 {
-  message: 'text warn',
-  level: 'warn',
-  service: 'user-service',
-  timestamp: '2021-11-21T19:18:53.813Z'
-}
-{
-  message: 'text error',
   level: 'error',
+  message: null,
   service: 'user-service',
-  timestamp: '2021-11-21T19:18:53.816Z'
+  timestamp: '2021-11-24T18:06:13.565Z'
 }
 {
-  message: 'text warn',
-  level: 'warn',
+  level: 'info',
+  message: { File_Name: 'test4' },
   service: 'user-service',
-  timestamp: '2021-11-21T19:44:32.823Z'
-}
-{
-  message: 'text error',
-  level: 'error',
-  service: 'user-service',
-  timestamp: '2021-11-21T19:44:32.836Z'
+  timestamp: '2021-11-24T18:06:17.243Z'
 }
