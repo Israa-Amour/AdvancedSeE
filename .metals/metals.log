@@ -3,3 +3,7 @@
 [0m2021.11.24 19:14:43 WARN  Build server is not auto-connectable.[0m
 [0m2021.11.24 19:14:43 WARN  no build tool detected in workspace 'C:\Users\DELL\Desktop\Advanced draft\AdvancedSeE'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
 [0m2021.11.24 20:15:30 INFO  shutting down Metals[0m
+[0m2021.11.26 10:42:59 INFO  Started: Metals version 0.10.9 in workspace 'C:\Users\DELL\Desktop\Advanced draft\AdvancedSeE' for client Visual Studio Code 1.62.3.[0m
+[0m2021.11.26 10:43:00 INFO  time: initialize in 0.53s[0m
+[0m2021.11.26 10:43:00 WARN  Build server is not auto-connectable.[0m
+[0m2021.11.26 10:43:00 WARN  no build tool detected in workspace 'C:\Users\DELL\Desktop\Advanced draft\AdvancedSeE'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m

@@ -167,13 +167,14 @@ app.listen(PORT, () => console.log(`Server is running at port ${PORT}`))
 //// register and log in
     // Handling Errors
     app.use((err, req, res, next) => {
+        logger.log({ level: "info", message: req.body });
+        logger.log({ level: "error", message: err });
         // console.log(err);
         err.statusCode = err.statusCode || 500;
         err.message = err.message || "Internal Server Error";
         res.status(err.statusCode).json({
           message: err.message,
         });
-        logger.log({ level: "info", message: req.body });
     });
     
 
