@@ -15,6 +15,9 @@ router.post('/register', [
     .escape()
     .trim().isEmail(),
     body('user_password',"The Password must be of minimum 4 characters length").notEmpty().trim().isLength({ min: 4 }),
+    body('db_Name',"Invalid db name")
+    .notEmpty()
+    .trim(),
 ], register);
 
 
@@ -24,6 +27,9 @@ router.post('/login',[
     .escape()
     .trim().isEmail(),
     body('user_password',"The Password must be of minimum 4 characters length").notEmpty().trim().isLength({ min: 4 }),
+    body('db_Name',"Invalid db name")
+    .notEmpty()
+    .trim(),
 ],login);
 
 
