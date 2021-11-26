@@ -164,7 +164,7 @@ const PORT = process.env.PORT || 8000
 app.listen(PORT, () => console.log(`Server is running at port ${PORT}`))
 }
 
-//// register and log in
+//// register and login
     // Handling Errors
     app.use((err, req, res, next) => {
         logger.log({ level: "info", message: req.body });
@@ -177,4 +177,4 @@ app.listen(PORT, () => console.log(`Server is running at port ${PORT}`))
         });
     });
     
-
+/////////////////////////////////////////////////////////////console
