@@ -26,6 +26,7 @@ db.connect((err) => {
 app.listen(3000, () => console.log("Server is on port 3000"));
 app.get('/db/files', (req, res) => {
     db.query('SELECT * FROM files', (err, rows, fields) => {
+        logger.log({ level: "info", message: "get files from db" });
         if (!err)
         
             res.send(rows)
@@ -34,11 +35,10 @@ app.get('/db/files', (req, res) => {
             logger.log({ level: "error", message: err });
 
     })
- logger.log({ level: "info", message: "get files from db" });
-
 });
 app.get('/db/user', (req, res) => {
     db.query('SELECT * FROM user', (err, rows, fields) => {
+        logger.log({ level: "info",   message: "get user from db" });;
         if (!err)
         
             res.send(rows)
@@ -46,22 +46,22 @@ app.get('/db/user', (req, res) => {
             console.log(err);
             logger.log({ level: "error", message: err });
     })
-    logger.log({ level: "info",   message: "get user from db" });;
 });
 
 //Delete According to file ID 
 app.delete('/db/files/delete/:id',(req,res)=>{
      db.query("DELETE FROM files WHERE File_ID = ?", [req.body.File_ID], (err, rows, fields) => {
+        logger.log({ level: "info", message: "delete" }); 
         if (!err)
             res.send(rows);
         else
             console.log(err);
     }); 
-    logger.log({ level: "info", message: "delete" }); 
  });
 //Adding new file 
 app.post('/db/files/add', (req, res) => {
     db.query("INSERT INTO files(File_Name) values (?)", [req.body.File_Name], (err, rows, fields) => {
+        logger.log({ level: "info", message: req.body });
         if (!err)
             res.send(rows);
         else{
@@ -69,7 +69,6 @@ app.post('/db/files/add', (req, res) => {
             logger.log({ level: "error", message: err });
         }
     });
-    logger.log({ level: "info", message: req.body });
 });
 //update due id to file name 
 app.put('/db/files/update', (req, res) => {
