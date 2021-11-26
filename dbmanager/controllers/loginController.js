@@ -13,12 +13,12 @@ exports.login = async (req,res,next) =>{
 
     try{
 // match email
-        const [email] = await conn.execute(
+        const [row] = await conn.execute(
             "SELECT * FROM `user` WHERE `user_Email`=?",
             [req.body.user_Email]
           );
 
-        if (email.length === 0) {
+        if (row.length === 0) {
             return res.status(422).json({
                 message: "Invalid email address",
             });

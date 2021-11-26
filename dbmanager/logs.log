@@ -332,3 +332,69 @@
   service: 'user-service',
   timestamp: '2021-11-26T13:47:45.915Z'
 }
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-11-26T15:12:07.086Z'
+}
+{
+  level: 'info',
+  message: {
+    user_password: 'ahm441',
+    user_Email: 'israa.amour22@gmail.com',
+    db_Name: 'db maneger'
+  },
+  service: 'user-service',
+  timestamp: '2021-11-26T15:12:11.094Z'
+}
+{
+  level: 'error',
+  message: ReferenceError: row is not defined
+      at exports.login (C:\Users\DELL\Desktop\advanced\AdVncedProject\dbmanager\controllers\loginController.js:38:72)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5),
+  service: 'user-service',
+  timestamp: '2021-11-26T15:12:11.094Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-11-26T15:14:21.358Z'
+}
+{
+  level: 'info',
+  message: {
+    user_password: 'ahm441',
+    user_Email: 'israa.amour22@gmail.com',
+    db_Name: 'db maneger'
+  },
+  service: 'user-service',
+  timestamp: '2021-11-26T15:14:25.702Z'
+}
+{
+  level: 'error',
+  message: ReferenceError: row is not defined
+      at exports.login (C:\Users\DELL\Desktop\advanced\AdVncedProject\dbmanager\controllers\loginController.js:38:72)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5),
+  service: 'user-service',
+  timestamp: '2021-11-26T15:14:25.702Z'
+}
+{
+  level: 'info',
+  message: {
+    user_password: 'ahm441',
+    user_Email: 'israa.amour22@gmail.com',
+    db_Name: 'db maneger'
+  },
+  service: 'user-service',
+  timestamp: '2021-11-26T15:14:26.848Z'
+}
+{
+  level: 'error',
+  message: ReferenceError: row is not defined
+      at exports.login (C:\Users\DELL\Desktop\advanced\AdVncedProject\dbmanager\controllers\loginController.js:38:72)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5),
+  service: 'user-service',
+  timestamp: '2021-11-26T15:14:26.848Z'
+}
