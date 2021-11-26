@@ -334,6 +334,7 @@
 }
 {
   level: 'error',
+<<<<<<< HEAD
   message: Error: Access denied for user 'root'@'localhost' (using password: YES)
       at Packet.asError (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\node_modules\mysql2\lib\packets\packet.js:728:17)
       at ClientHandshake.execute (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\node_modules\mysql2\lib\commands\command.js:29:26)
@@ -395,6 +396,9 @@
       at processTicksAndRejections (internal/process/task_queues.js:93:5),
   service: 'user-service',
   timestamp: '2021-11-26T14:42:58.261Z'
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-11-26T15:12:07.086Z'
 }
 {
   level: 'info',
@@ -405,6 +409,14 @@
   },
   service: 'user-service',
   timestamp: '2021-11-26T14:43:21.464Z'
+
+    user_password: 'ahm441',
+    user_Email: 'israa.amour22@gmail.com',
+    db_Name: 'db maneger'
+  },
+  service: 'user-service',
+  timestamp: '2021-11-26T15:12:11.094Z'
+
 }
 {
   level: 'error',
@@ -449,12 +461,19 @@
       at processTicksAndRejections (internal/process/task_queues.js:93:5),
   service: 'user-service',
   timestamp: '2021-11-26T14:45:03.060Z'
+
+      at exports.login (C:\Users\DELL\Desktop\advanced\AdVncedProject\dbmanager\controllers\loginController.js:38:72)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5),
+  service: 'user-service',
+  timestamp: '2021-11-26T15:12:11.094Z'
 }
 {
   level: 'error',
   message: null,
   service: 'user-service',
   timestamp: '2021-11-26T14:45:12.334Z'
+
+  timestamp: '2021-11-26T15:14:21.358Z'
 }
 {
   level: 'info',
@@ -465,6 +484,12 @@
   },
   service: 'user-service',
   timestamp: '2021-11-26T14:45:14.140Z'
+    user_password: 'ahm441',
+    user_Email: 'israa.amour22@gmail.com',
+    db_Name: 'db maneger'
+  },
+  service: 'user-service',
+  timestamp: '2021-11-26T15:14:25.702Z'
 }
 {
   level: 'error',
@@ -661,6 +686,10 @@
   message: null,
   service: 'user-service',
   timestamp: '2021-11-26T15:16:03.552Z'
+      at exports.login (C:\Users\DELL\Desktop\advanced\AdVncedProject\dbmanager\controllers\loginController.js:38:72)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5),
+  service: 'user-service',
+  timestamp: '2021-11-26T15:14:25.702Z'
 }
 {
   level: 'info',
@@ -671,6 +700,12 @@
   },
   service: 'user-service',
   timestamp: '2021-11-26T15:16:05.438Z'
+    user_password: 'ahm441',
+    user_Email: 'israa.amour22@gmail.com',
+    db_Name: 'db maneger'
+  },
+  service: 'user-service',
+  timestamp: '2021-11-26T15:14:26.848Z'
 }
 {
   level: 'error',
@@ -679,4 +714,46 @@
       at processTicksAndRejections (internal/process/task_queues.js:93:5),
   service: 'user-service',
   timestamp: '2021-11-26T15:16:05.439Z'
+      at exports.login (C:\Users\DELL\Desktop\advanced\AdVncedProject\dbmanager\controllers\loginController.js:38:72)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5),
+  service: 'user-service',
+  timestamp: '2021-11-26T15:14:26.848Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-11-26T15:20:44.994Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-11-26T15:23:35.769Z'
+}
+{
+  level: 'info',
+  message: {
+    user_Email: 'shadabana16@gmail.com',
+    user_password: 'pppp',
+    db_Name: 'dbmanager'
+  },
+  service: 'user-service',
+  timestamp: '2021-11-26T15:25:18.656Z'
+}
+{
+  level: 'error',
+  message: TypeError: Cannot read property 'filename' of undefined
+      at C:\Users\IAmour\Desktop\PROJECT\AdvancedSeE\dbmanager\index.js:121:61
+      at Layer.handle [as handle_request] (C:\Users\IAmour\Desktop\PROJECT\AdvancedSeE\dbmanager\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\IAmour\Desktop\PROJECT\AdvancedSeE\dbmanager\node_modules\express\lib\router\route.js:137:13)
+      at multerMiddleware (C:\Users\IAmour\Desktop\PROJECT\AdvancedSeE\dbmanager\node_modules\multer\lib\make-middleware.js:18:41)
+      at Layer.handle [as handle_request] (C:\Users\IAmour\Desktop\PROJECT\AdvancedSeE\dbmanager\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\IAmour\Desktop\PROJECT\AdvancedSeE\dbmanager\node_modules\express\lib\router\route.js:137:13)
+      at Route.dispatch (C:\Users\IAmour\Desktop\PROJECT\AdvancedSeE\dbmanager\node_modules\express\lib\router\route.js:112:3)
+      at Layer.handle [as handle_request] (C:\Users\IAmour\Desktop\PROJECT\AdvancedSeE\dbmanager\node_modules\express\lib\router\layer.js:95:5)
+      at C:\Users\IAmour\Desktop\PROJECT\AdvancedSeE\dbmanager\node_modules\express\lib\router\index.js:281:22
+      at Function.process_params (C:\Users\IAmour\Desktop\PROJECT\AdvancedSeE\dbmanager\node_modules\express\lib\router\index.js:335:12),
+  service: 'user-service',
+  timestamp: '2021-11-26T15:25:18.656Z'
 }
