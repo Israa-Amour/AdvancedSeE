@@ -332,3 +332,351 @@
   service: 'user-service',
   timestamp: '2021-11-26T13:47:45.915Z'
 }
+{
+  level: 'error',
+  message: Error: Access denied for user 'root'@'localhost' (using password: YES)
+      at Packet.asError (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\node_modules\mysql2\lib\packets\packet.js:728:17)
+      at ClientHandshake.execute (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\node_modules\mysql2\lib\commands\command.js:29:26)
+      at Connection.handlePacket (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:456:32)
+      at PacketParser.onPacket (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:85:12)
+      at PacketParser.executeStart (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:92:25)
+      at Socket.emit (events.js:315:20)
+      at addChunk (internal/streams/readable.js:309:12)
+      at readableAddChunk (internal/streams/readable.js:284:9)
+      at Socket.Readable.push (internal/streams/readable.js:223:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'root'@'localhost' (using password: YES)",
+    sql: undefined
+  },
+  service: 'user-service',
+  timestamp: '2021-11-26T14:30:29.658Z'
+}
+{
+  level: 'error',
+  message: "Access denied for user 'root'@'localhost' (using password: YES)",
+  service: 'user-service',
+  timestamp: '2021-11-26T14:30:29.661Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-11-26T14:30:48.567Z'
+}
+{
+  level: 'info',
+  message: 'delete',
+  service: 'user-service',
+  timestamp: '2021-11-26T14:35:33.978Z'
+}
+{
+  level: 'info',
+  message: 'delete',
+  service: 'user-service',
+  timestamp: '2021-11-26T14:35:45.227Z'
+}
+{
+  level: 'info',
+  message: {
+    user_Email: 'shadabana16@gmail.com',
+    user_password: 'pppp',
+    db_Name: 'dbmanager'
+  },
+  service: 'user-service',
+  timestamp: '2021-11-26T14:42:58.261Z'
+}
+{
+  level: 'error',
+  message: ReferenceError: row is not defined
+      at exports.login (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\controllers\loginController.js:38:72)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5),
+  service: 'user-service',
+  timestamp: '2021-11-26T14:42:58.261Z'
+}
+{
+  level: 'info',
+  message: {
+    user_Email: 'shadabana16@gmail.com',
+    user_password: 'pppp',
+    db_Name: 'dbmanager'
+  },
+  service: 'user-service',
+  timestamp: '2021-11-26T14:43:21.464Z'
+}
+{
+  level: 'error',
+  message: ReferenceError: row is not defined
+      at exports.login (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\controllers\loginController.js:38:72)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5),
+  service: 'user-service',
+  timestamp: '2021-11-26T14:43:21.464Z'
+}
+{
+  level: 'info',
+  message: {
+    user_Email: 'shadabana16@gmail.com',
+    user_password: 'pppp',
+    db_Name: 'dbmanager'
+  },
+  service: 'user-service',
+  timestamp: '2021-11-26T14:44:39.761Z'
+}
+{
+  level: 'error',
+  message: ReferenceError: row is not defined
+      at exports.login (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\controllers\loginController.js:38:72)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5),
+  service: 'user-service',
+  timestamp: '2021-11-26T14:44:39.761Z'
+}
+{
+  level: 'info',
+  message: {
+    user_Email: 'shadabana16@gmail.com',
+    user_password: 'pppp',
+    db_Name: 'dbmanager'
+  },
+  service: 'user-service',
+  timestamp: '2021-11-26T14:45:03.060Z'
+}
+{
+  level: 'error',
+  message: ReferenceError: row is not defined
+      at exports.login (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\controllers\loginController.js:38:72)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5),
+  service: 'user-service',
+  timestamp: '2021-11-26T14:45:03.060Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-11-26T14:45:12.334Z'
+}
+{
+  level: 'info',
+  message: {
+    user_Email: 'shadabana16@gmail.com',
+    user_password: 'pppp',
+    db_Name: 'dbmanager'
+  },
+  service: 'user-service',
+  timestamp: '2021-11-26T14:45:14.140Z'
+}
+{
+  level: 'error',
+  message: ReferenceError: row is not defined
+      at exports.login (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\controllers\loginController.js:38:72)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5),
+  service: 'user-service',
+  timestamp: '2021-11-26T14:45:14.141Z'
+}
+{
+  level: 'info',
+  message: 'get files from db',
+  service: 'user-service',
+  timestamp: '2021-11-26T14:45:37.262Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-11-26T14:45:37.263Z'
+}
+{
+  level: 'info',
+  message: {
+    user_Email: 'shadabana16@gmail.com',
+    user_password: 'pppp',
+    db_Name: 'dbmanager'
+  },
+  service: 'user-service',
+  timestamp: '2021-11-26T14:46:16.347Z'
+}
+{
+  level: 'error',
+  message: TypeError: Cannot read property 'filename' of undefined
+      at C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\index.js:121:61
+      at Layer.handle [as handle_request] (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\node_modules\express\lib\router\route.js:137:13)
+      at multerMiddleware (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\node_modules\multer\lib\make-middleware.js:18:41)
+      at Layer.handle [as handle_request] (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\node_modules\express\lib\router\route.js:137:13)
+      at Route.dispatch (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\node_modules\express\lib\router\route.js:112:3)
+      at Layer.handle [as handle_request] (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\node_modules\express\lib\router\layer.js:95:5)
+      at C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\node_modules\express\lib\router\index.js:281:22
+      at Function.process_params (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\node_modules\express\lib\router\index.js:335:12),
+  service: 'user-service',
+  timestamp: '2021-11-26T14:46:16.347Z'
+}
+{
+  level: 'info',
+  message: {
+    user_Email: 'shadabana16@gmail.com',
+    user_password: 'pppp',
+    db_Name: 'dbmanager'
+  },
+  service: 'user-service',
+  timestamp: '2021-11-26T14:46:24.366Z'
+}
+{
+  level: 'error',
+  message: ReferenceError: row is not defined
+      at exports.login (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\controllers\loginController.js:38:72)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5),
+  service: 'user-service',
+  timestamp: '2021-11-26T14:46:24.366Z'
+}
+{
+  level: 'info',
+  message: {
+    user_password: 'pppp',
+    user_Email: 'shadabana16@gmail.com',
+    db_Name: 'dbmanager'
+  },
+  service: 'user-service',
+  timestamp: '2021-11-26T14:47:28.079Z'
+}
+{
+  level: 'error',
+  message: ReferenceError: row is not defined
+      at exports.login (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\controllers\loginController.js:38:72)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5),
+  service: 'user-service',
+  timestamp: '2021-11-26T14:47:28.080Z'
+}
+{
+  level: 'info',
+  message: {
+    user_Email: 'shadabana16@gmail.com',
+    user_password: 'pppp',
+    db_Name: 'dbmanager'
+  },
+  service: 'user-service',
+  timestamp: '2021-11-26T14:47:46.018Z'
+}
+{
+  level: 'error',
+  message: ReferenceError: row is not defined
+      at exports.login (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\controllers\loginController.js:38:72)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5),
+  service: 'user-service',
+  timestamp: '2021-11-26T14:47:46.019Z'
+}
+{
+  level: 'info',
+  message: {
+    user_Email: 'shadabana16@gmail.com',
+    user_password: 'pppp',
+    db_Name: 'dbmanager'
+  },
+  service: 'user-service',
+  timestamp: '2021-11-26T14:50:42.954Z'
+}
+{
+  level: 'error',
+  message: ReferenceError: row is not defined
+      at exports.login (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\controllers\loginController.js:38:72)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5),
+  service: 'user-service',
+  timestamp: '2021-11-26T14:50:42.954Z'
+}
+{
+  level: 'info',
+  message: {
+    user_Email: 'shadabana16@gmail.com',
+    user_password: 'pppp',
+    db_Name: 'dbmanager'
+  },
+  service: 'user-service',
+  timestamp: '2021-11-26T14:51:10.638Z'
+}
+{
+  level: 'error',
+  message: ReferenceError: row is not defined
+      at exports.login (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\controllers\loginController.js:38:72)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5),
+  service: 'user-service',
+  timestamp: '2021-11-26T14:51:10.638Z'
+}
+{
+  level: 'info',
+  message: {
+    user_Email: 'shadabana16@gmail.com',
+    user_password: 'pppp',
+    db_Name: 'dbmanager'
+  },
+  service: 'user-service',
+  timestamp: '2021-11-26T15:08:05.644Z'
+}
+{
+  level: 'error',
+  message: ReferenceError: row is not defined
+      at exports.login (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\controllers\loginController.js:38:72)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5),
+  service: 'user-service',
+  timestamp: '2021-11-26T15:08:05.646Z'
+}
+{
+  level: 'info',
+  message: {
+    user_Email: 'shadabana16@gmail.com',
+    user_password: 'pppp',
+    db_Name: 'dbmanager'
+  },
+  service: 'user-service',
+  timestamp: '2021-11-26T15:08:20.907Z'
+}
+{
+  level: 'error',
+  message: ReferenceError: row is not defined
+      at exports.login (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\controllers\loginController.js:38:72)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5),
+  service: 'user-service',
+  timestamp: '2021-11-26T15:08:20.907Z'
+}
+{
+  level: 'info',
+  message: {
+    user_Email: 'shadabana16@gmail.com',
+    user_password: 'pppp',
+    db_Name: 'dbmanager'
+  },
+  service: 'user-service',
+  timestamp: '2021-11-26T15:08:38.305Z'
+}
+{
+  level: 'error',
+  message: ReferenceError: row is not defined
+      at exports.login (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\controllers\loginController.js:38:72)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5),
+  service: 'user-service',
+  timestamp: '2021-11-26T15:08:38.306Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-11-26T15:16:03.552Z'
+}
+{
+  level: 'info',
+  message: {
+    user_Email: 'shadabana16@gmail.com',
+    user_password: 'pppp',
+    db_Name: 'dbmanager'
+  },
+  service: 'user-service',
+  timestamp: '2021-11-26T15:16:05.438Z'
+}
+{
+  level: 'error',
+  message: ReferenceError: row is not defined
+      at exports.login (C:\Users\IAmour\Desktop\fina\AdvancedSeE\dbmanager\controllers\loginController.js:38:72)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5),
+  service: 'user-service',
+  timestamp: '2021-11-26T15:16:05.439Z'
+}
