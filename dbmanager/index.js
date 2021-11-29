@@ -24,6 +24,9 @@ db.connect((err) => {
         logger.log({ level: "error", message: err });
 });
 app.listen(3000, () => console.log("Server is on port 3000"));
+
+
+//APIS 
 app.get('/db/files', (req, res) => {
     db.query('SELECT * FROM files', (err, rows, fields) => {
         logger.log({ level: "info", message: "get files from db" });
@@ -50,6 +53,7 @@ app.get('/db/user', (req, res) => {
 
 //Delete According to file ID 
 app.delete('/db/files/delete/:id',(req,res)=>{
+
      db.query("DELETE FROM files WHERE File_ID = ?", [req.body.File_ID], (err, rows, fields) => {
         logger.log({ level: "info", message: "delete" }); 
         if (!err)
@@ -60,6 +64,7 @@ app.delete('/db/files/delete/:id',(req,res)=>{
  });
 //Adding new file 
 app.post('/db/files/add', (req, res) => {
+
     db.query("INSERT INTO files(File_Name) values (?)", [req.body.File_Name], (err, rows, fields) => {
         logger.log({ level: "info", message: req.body });
         if (!err)
@@ -177,4 +182,3 @@ app.listen(PORT, () => console.log(`Server is running at port ${PORT}`))
         });
     });
     
-/////////////////////////////////////////////////////////////console

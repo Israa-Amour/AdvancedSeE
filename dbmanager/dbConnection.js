@@ -7,7 +7,8 @@ const db_connection = mysqlc.createConnection({
         user:"root",
         password:"shada1402BANA",
         database:"dbmanager"
-    }).on("error", (err) => {
+    })
+    .on("error", (err) => {
         console.log("Failed to connect to Database - ", err);
       });
     
