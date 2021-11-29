@@ -483,3 +483,9 @@
   service: 'user-service',
   timestamp: '2021-11-29T19:35:00.171Z'
 }
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-11-29T19:38:56.790Z'
+}
