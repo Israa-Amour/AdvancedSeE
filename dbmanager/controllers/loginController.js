@@ -13,12 +13,12 @@ exports.login = async (req,res,next) =>{
 
     try{
 // match email
-        const [row] = await conn.execute(
+        const [email] = await conn.execute(
             "SELECT * FROM `user` WHERE `user_Email`=?",
             [req.body.user_Email]
           );
 
-        if (row.length === 0) {
+        if (email.length === 0) {
             return res.status(422).json({
                 message: "Invalid email address",
             });
@@ -34,8 +34,9 @@ exports.login = async (req,res,next) =>{
                 message: "Invalid db Name",
             });
         }
+        
 // match pass
-        const passMatch = await bcrypt.compare(req.body.user_password, row[0].user_password);
+        const passMatch = await bcrypt.compare(req.body.user_password, email[0].user_password);
         if(!passMatch){
             return res.status(422).json({
                 message: "Incorrect password",

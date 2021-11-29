@@ -17,6 +17,8 @@ router.post('/register', [
     body('user_password',"The Password must be of minimum 4 characters length").notEmpty().trim().isLength({ min: 4 }),
     body('db_Name',"Invalid db name")
     .notEmpty()
+    .trim(), body('host_Name',"host_Name")
+    .notEmpty()
     .trim(),
 ], register);
 

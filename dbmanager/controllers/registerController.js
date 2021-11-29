@@ -24,11 +24,12 @@ exports.register = async(req,res,next) => {
 
         const hashPass = await bcrypt.hash(req.body.user_password, 12);
 
-        const [rows] = await conn.execute('INSERT INTO `user`(`user_name`,`user_password`,`user_Email`,`db_Name`) VALUES(?,?,?,?)',[
+        const [rows] = await conn.execute('INSERT INTO `user`(`user_name`,`user_password`,`user_Email`,`db_Name`,`host_Name`) VALUES(?,?,?,?,?)',[
             req.body.user_name,
             hashPass,
             req.body.user_Email,
-            req.body.db_Name
+            req.body.db_Name,
+            req.body.host_Name
             
         ]);
 

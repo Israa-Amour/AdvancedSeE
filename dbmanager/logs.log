@@ -404,3 +404,82 @@
   service: 'user-service',
   timestamp: '2021-11-26T15:15:52.508Z'
 }
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-11-29T18:59:56.238Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-11-29T19:22:42.738Z'
+}
+{
+  level: 'info',
+  message: 'get user from db',
+  service: 'user-service',
+  timestamp: '2021-11-29T19:24:05.402Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-11-29T19:24:05.406Z'
+}
+{
+  level: 'info',
+  message: {},
+  service: 'user-service',
+  timestamp: '2021-11-29T19:34:51.959Z'
+}
+{
+  level: 'error',
+  message: SyntaxError: Unexpected token } in JSON at position 123
+      at JSON.parse (<anonymous>)
+      at parse (C:\Users\DELL\Desktop\advanced\AdVncedProject\dbmanager\node_modules\body-parser\lib\types\json.js:89:19)
+      at C:\Users\DELL\Desktop\advanced\AdVncedProject\dbmanager\node_modules\body-parser\lib\read.js:121:18
+      at invokeCallback (C:\Users\DELL\Desktop\advanced\AdVncedProject\dbmanager\node_modules\raw-body\index.js:224:16)
+      at done (C:\Users\DELL\Desktop\advanced\AdVncedProject\dbmanager\node_modules\raw-body\index.js:213:7)
+      at IncomingMessage.onEnd (C:\Users\DELL\Desktop\advanced\AdVncedProject\dbmanager\node_modules\raw-body\index.js:273:7)
+      at IncomingMessage.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21) {
+    expose: true,
+    statusCode: 400,
+    status: 400,
+    body: '{\r\n' +
+      '       "user_password": "yyyyy44d",\r\n' +
+      '        "user_Email": "ghaidaashtayeh99@gmail.com",\r\n' +
+      '        "db_Name": "db",\r\n' +
+      '    }',
+    type: 'entity.parse.failed'
+  },
+  service: 'user-service',
+  timestamp: '2021-11-29T19:34:51.964Z'
+}
+{
+  level: 'info',
+  message: {
+    user_password: 'yyyyy44d',
+    user_Email: 'ghaidaashtayeh99@gmail.com',
+    db_Name: 'db'
+  },
+  service: 'user-service',
+  timestamp: '2021-11-29T19:35:00.170Z'
+}
+{
+  level: 'error',
+  message: TypeError: Bind parameters must not contain undefined. To pass SQL NULL specify JS null
+      at C:\Users\DELL\Desktop\advanced\AdVncedProject\dbmanager\node_modules\mysql2\lib\connection.js:628:17
+      at Array.forEach (<anonymous>)
+      at Connection.execute (C:\Users\DELL\Desktop\advanced\AdVncedProject\dbmanager\node_modules\mysql2\lib\connection.js:620:22)
+      at C:\Users\DELL\Desktop\advanced\AdVncedProject\dbmanager\node_modules\mysql2\promise.js:120:11
+      at new Promise (<anonymous>)
+      at PromiseConnection.execute (C:\Users\DELL\Desktop\advanced\AdVncedProject\dbmanager\node_modules\mysql2\promise.js:117:12)
+      at exports.login (C:\Users\DELL\Desktop\advanced\AdVncedProject\dbmanager\controllers\loginController.js:38:40)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5),
+  service: 'user-service',
+  timestamp: '2021-11-29T19:35:00.171Z'
+}
