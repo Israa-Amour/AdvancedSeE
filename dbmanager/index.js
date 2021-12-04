@@ -14,6 +14,8 @@ const routes = require('./routes');
 app.use(express.json());
 app.use(routes);
 const logger = require('./logger')
+const CSVtoSQL = require('./ImportCSVFile/CSVtoDb');
+
 
 
 db.connect((err) => {
@@ -23,6 +25,8 @@ db.connect((err) => {
         console.log(err);
         logger.log({ level: "error", message: err });
 });
+CSVtoSQL('ImportCSVFile/test.csv')
+
 app.listen(3000, () => console.log("Server is on port 3000"));
 app.get('/db/files', (req, res) => {
     db.query('SELECT * FROM files', (err, rows, fields) => {
@@ -177,4 +181,5 @@ app.listen(PORT, () => console.log(`Server is running at port ${PORT}`))
         });
     });
     
-/////////////////////////////////////////////////////////////console
+/////////////////////////////////////////////////////////////
+
