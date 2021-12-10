@@ -84,3 +84,268 @@
   service: 'user-service',
   timestamp: '2021-11-26T09:12:36.001Z'
 }
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-09T18:27:04.812Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-09T18:27:04.815Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-09T18:38:44.663Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-09T18:38:44.676Z'
+}
+{
+  level: 'error',
+  message: Error: connect ETIMEDOUT
+      at Connection._handleTimeoutError (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:189:17)
+      at listOnTimeout (internal/timers.js:554:17)
+      at processTimers (internal/timers.js:497:7) {
+    errorno: 'ETIMEDOUT',
+    code: 'ETIMEDOUT',
+    syscall: 'connect',
+    fatal: true
+  },
+  service: 'user-service',
+  timestamp: '2021-12-10T09:50:31.257Z'
+}
+{
+  level: 'error',
+  message: Error: connect ETIMEDOUT
+      at Connection._handleTimeoutError (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:189:17)
+      at listOnTimeout (internal/timers.js:554:17)
+      at processTimers (internal/timers.js:497:7) {
+    errorno: 'ETIMEDOUT',
+    code: 'ETIMEDOUT',
+    syscall: 'connect',
+    fatal: true
+  },
+  service: 'user-service',
+  timestamp: '2021-12-10T09:50:31.374Z'
+}
+{
+  level: 'error',
+  message: 'connect ETIMEDOUT',
+  service: 'user-service',
+  timestamp: '2021-12-10T09:50:31.376Z'
+}
+{
+  level: 'error',
+  message: Error: Can't add new command when connection is in closed state
+      at Connection._addCommandClosedState (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:148:17)
+      at Connection.query (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:546:17)
+      at readCsvFile (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\ImportCSVFile\CSVtoDb.js:39:16) {
+    fatal: true
+  },
+  service: 'user-service',
+  timestamp: '2021-12-10T09:50:31.571Z'
+}
+{
+  level: 'error',
+  message: Error: read ECONNRESET
+      at TCP.onStreamRead (internal/stream_base_commons.js:209:20) {
+    errno: -4077,
+    code: 'ECONNRESET',
+    syscall: 'read',
+    fatal: true
+  },
+  service: 'user-service',
+  timestamp: '2021-12-10T09:51:59.730Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-10T09:54:35.060Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-10T09:54:35.070Z'
+}
+{
+  level: 'info',
+  message: {
+    user_password: 'yyyyy44d',
+    user_Email: 'ghaidaashtayeh99@gmail.com',
+    db_Name: 'db'
+  },
+  service: 'user-service',
+  timestamp: '2021-12-10T09:54:48.266Z'
+}
+{
+  level: 'error',
+  message: Error: Can't add new command when connection is in closed state
+      at PromiseConnection.execute (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\node_modules\mysql2\promise.js:111:22)
+      at exports.login (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\controllers\loginController.js:16:34)
+      at Layer.handle [as handle_request] (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\node_modules\express\lib\router\route.js:137:13)
+      at middleware (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\node_modules\express-validator\src\middlewares\check.js:16:13)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+    code: undefined,
+    errno: undefined,
+    sql: undefined,
+    sqlState: undefined,
+    sqlMessage: undefined
+  },
+  service: 'user-service',
+  timestamp: '2021-12-10T09:54:48.268Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-10T10:01:11.557Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-10T10:01:11.568Z'
+}
+{
+  level: 'info',
+  message: {
+    user_password: 'yyyyy44d',
+    user_Email: 'ghaidaashtayeh99@gmail.com',
+    db_Name: 'db'
+  },
+  service: 'user-service',
+  timestamp: '2021-12-10T10:01:15.418Z'
+}
+{
+  level: 'error',
+  message: Error: Can't add new command when connection is in closed state
+      at PromiseConnection.execute (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\node_modules\mysql2\promise.js:111:22)
+      at exports.login (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\controllers\loginController.js:16:34)
+      at Layer.handle [as handle_request] (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\node_modules\express\lib\router\route.js:137:13)
+      at middleware (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\node_modules\express-validator\src\middlewares\check.js:16:13)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+    code: undefined,
+    errno: undefined,
+    sql: undefined,
+    sqlState: undefined,
+    sqlMessage: undefined
+  },
+  service: 'user-service',
+  timestamp: '2021-12-10T10:01:15.418Z'
+}
+{
+  level: 'info',
+  message: {
+    user_password: 'yyyyy44d',
+    user_Email: 'ghaidaashtayeh99@gmail.com',
+    db_Name: 'db'
+  },
+  service: 'user-service',
+  timestamp: '2021-12-10T10:01:17.146Z'
+}
+{
+  level: 'error',
+  message: Error: Can't add new command when connection is in closed state
+      at PromiseConnection.execute (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\node_modules\mysql2\promise.js:111:22)
+      at exports.login (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\controllers\loginController.js:16:34)
+      at Layer.handle [as handle_request] (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\node_modules\express\lib\router\route.js:137:13)
+      at middleware (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\node_modules\express-validator\src\middlewares\check.js:16:13)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+    code: undefined,
+    errno: undefined,
+    sql: undefined,
+    sqlState: undefined,
+    sqlMessage: undefined
+  },
+  service: 'user-service',
+  timestamp: '2021-12-10T10:01:17.149Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-10T10:03:26.158Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-10T10:03:26.164Z'
+}
+{
+  level: 'info',
+  message: {
+    user_password: 'yyyyy44d',
+    user_Email: 'ghaidaashtayeh99@gmail.com',
+    db_Name: 'db'
+  },
+  service: 'user-service',
+  timestamp: '2021-12-10T10:03:39.990Z'
+}
+{
+  level: 'error',
+  message: Error: Can't add new command when connection is in closed state
+      at PromiseConnection.execute (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\node_modules\mysql2\promise.js:111:22)
+      at exports.login (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\controllers\loginController.js:16:34)
+      at Layer.handle [as handle_request] (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\node_modules\express\lib\router\route.js:137:13)
+      at middleware (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\node_modules\express-validator\src\middlewares\check.js:16:13)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+    code: undefined,
+    errno: undefined,
+    sql: undefined,
+    sqlState: undefined,
+    sqlMessage: undefined
+  },
+  service: 'user-service',
+  timestamp: '2021-12-10T10:03:39.991Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-10T10:04:05.160Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-10T10:04:05.166Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-10T10:05:46.938Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-10T10:05:46.950Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-10T12:14:49.388Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-10T12:14:49.405Z'
+}

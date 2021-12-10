@@ -76,7 +76,7 @@ function writeData(data,fileName,tableName,currentTimeinEpoch){
                     throw err;
                }else{
                    console.log(`SQL File Executed Successfully : ${currentTimeinEpoch}.sql`);
-                   connection.end()
+                 
                }
             })
         }
