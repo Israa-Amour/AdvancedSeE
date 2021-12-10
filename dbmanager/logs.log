@@ -349,3 +349,27 @@
   service: 'user-service',
   timestamp: '2021-12-10T12:14:49.405Z'
 }
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-10T12:40:09.261Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-10T12:40:09.299Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-10T12:56:23.784Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-10T12:56:23.806Z'
+}
