@@ -27,6 +27,7 @@
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "pg-promise": "^10.11.1",
+    "prompt-sync": "^4.2.0",
     "winston": "^3.3.3"
   },
   "devDependencies": {

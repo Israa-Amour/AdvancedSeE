@@ -17,8 +17,7 @@ connection.connect((err) => {
         
 });
 module.exports = readCsvFile;
-/*const filePath='test.csv';
-readCsvFile(filePath)*/
+
 async function readCsvFile(filePath){
     let csvData=await csv().fromFile(filePath);
     let tableName = path.parse(filePath).name;
@@ -76,7 +75,6 @@ function writeData(data,fileName,tableName,currentTimeinEpoch){
                     throw err;
                }else{
                    console.log(`SQL File Executed Successfully : ${currentTimeinEpoch}.sql`);
-                   connection.end()
                }
             })
         }
