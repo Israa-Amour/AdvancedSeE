@@ -609,3 +609,137 @@
   service: 'user-service',
   timestamp: '2021-12-10T12:46:49.080Z'
 }
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-11T15:51:30.258Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-11T15:51:30.277Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-11T15:51:30.279Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-11T15:53:37.155Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-11T15:53:37.170Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-11T15:53:37.172Z'
+}
+{
+  level: 'error',
+  message: Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1639238144896
+              (File_ID INT NOT NULL AUTO_INCREMENT,  
+              F' at line 1
+      at Packet.asError (C:\Users\DELL\Desktop\New folder (4)\AdvancedSeE\dbmanager\node_modules\mysql2\lib\packets\packet.js:728:17)
+      at Query.execute (C:\Users\DELL\Desktop\New folder (4)\AdvancedSeE\dbmanager\node_modules\mysql2\lib\commands\command.js:29:26)
+      at Connection.handlePacket (C:\Users\DELL\Desktop\New folder (4)\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:456:32)
+      at PacketParser.onPacket (C:\Users\DELL\Desktop\New folder (4)\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:85:12)
+      at PacketParser.executeStart (C:\Users\DELL\Desktop\New folder (4)\AdvancedSeE\dbmanager\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (C:\Users\DELL\Desktop\New folder (4)\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:92:25)
+      at Socket.emit (node:events:329:20)
+      at addChunk (node:internal/streams/readable:304:12)
+      at readableAddChunk (node:internal/streams/readable:279:9)
+      at Socket.Readable.push (node:internal/streams/readable:218:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:192:23) {
+    code: 'ER_PARSE_ERROR',
+    errno: 1064,
+    sqlState: '42000',
+    sqlMessage: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1639238144896\n" +
+      '            (File_ID INT NOT NULL AUTO_INCREMENT,  \n' +
+      "            F' at line 1",
+    sql: 'CREATE TABLE uploadfile-1639238144896\n' +
+      '            (File_ID INT NOT NULL AUTO_INCREMENT,  \n' +
+      '            File_Name VARCHAR(50),\n' +
+      '            PRIMARY KEY(File_ID)\n' +
+      '            )'
+  },
+  service: 'user-service',
+  timestamp: '2021-12-11T15:55:45.324Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-11T16:01:08.570Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-11T16:01:08.584Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-11T16:01:08.586Z'
+}
+{
+  level: 'error',
+  message: Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1639238482733
+              (File_ID INT NOT NULL AUTO_INCREMENT,  
+              F' at line 1
+      at Packet.asError (C:\Users\DELL\Desktop\New folder (4)\AdvancedSeE\dbmanager\node_modules\mysql2\lib\packets\packet.js:728:17)
+      at Query.execute (C:\Users\DELL\Desktop\New folder (4)\AdvancedSeE\dbmanager\node_modules\mysql2\lib\commands\command.js:29:26)
+      at Connection.handlePacket (C:\Users\DELL\Desktop\New folder (4)\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:456:32)
+      at PacketParser.onPacket (C:\Users\DELL\Desktop\New folder (4)\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:85:12)
+      at PacketParser.executeStart (C:\Users\DELL\Desktop\New folder (4)\AdvancedSeE\dbmanager\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (C:\Users\DELL\Desktop\New folder (4)\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:92:25)
+      at Socket.emit (node:events:329:20)
+      at addChunk (node:internal/streams/readable:304:12)
+      at readableAddChunk (node:internal/streams/readable:279:9)
+      at Socket.Readable.push (node:internal/streams/readable:218:10)
+      at TCP.onStreamRead (node:internal/stream_base_commons:192:23) {
+    code: 'ER_PARSE_ERROR',
+    errno: 1064,
+    sqlState: '42000',
+    sqlMessage: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1639238482733\n" +
+      '            (File_ID INT NOT NULL AUTO_INCREMENT,  \n' +
+      "            F' at line 1",
+    sql: 'CREATE TABLE uploadfile-1639238482733\n' +
+      '            (File_ID INT NOT NULL AUTO_INCREMENT,  \n' +
+      '            File_Name VARCHAR(50),\n' +
+      '            PRIMARY KEY(File_ID)\n' +
+      '            )'
+  },
+  service: 'user-service',
+  timestamp: '2021-12-11T16:01:22.874Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-11T16:11:47.977Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-11T16:11:47.981Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-11T16:11:47.982Z'
+}
