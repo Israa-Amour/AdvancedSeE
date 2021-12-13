@@ -29,15 +29,16 @@ app.get('/export-csv',function(req,res){
     console.log(csv);
  
      res.setHeader("Content-Type", "text/csv");
-     res.setHeader("Content-Disposition", "attachment; filename=files.csv");
+     res.setHeader("Content-Disposition", `attachment; filename=${tableName}.csv`);
  
      res.status(200).end(csv);
   
   });
 });
 db.query(`DESCRIBE ${tableName}`, function (err,files, fields) {
-  if (err) throw err;
   console.log(files);  
+  fs.writeFileSync("./txtSchema/Schema1", JSON.stringify(files));
+
 });
 
 
