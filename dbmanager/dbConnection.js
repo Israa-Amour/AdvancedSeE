@@ -9,10 +9,10 @@ const databaseName = prompt("Enter database name : ");
 console.log(`Your host name is ${hostName} and user name is ${userName} and password is ${password} and database name ${databaseName}`)
 
 const db_connection = mysqlc.createConnection({
-        host:"localhost",
-        user:"root",
-        password:"0096612122255",
-        database:"dbmanager",
+        host:`${hostName}`,
+        user:`${userName}`,
+        password:`${password}`,
+        database:`${databaseName}`,
         multipleStatements: true // Important for SQL File Execution
 
     }).on("error", (err) => {
