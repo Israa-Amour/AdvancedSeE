@@ -9,7 +9,7 @@ const DB_NAME = 'test';
 
   dataToDB('Test 1','1')
   getDataFromDB('Test1','1')
-  deleteData('Test1','1')
+  deleteData('1')
 
 function getDataFromDB(File_Name,version){
     let select_query = `SELECT * from test where File_Name='${File_Name}' and version = '${version}' ORDER by File_ID desc LIMIT 1`;
@@ -33,7 +33,7 @@ function dataToDB(File_Name,version){
     })
 }
 
-function deleteData(File_Name,version){
+function deleteData(version){
     let delete_query = `DELETE FROM test  WHERE version !='${version}'`;
     connection.query(delete_query,(err, result) => {
         if (err){

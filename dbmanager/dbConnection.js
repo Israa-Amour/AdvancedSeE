@@ -8,12 +8,8 @@ const password  = prompt("Enter password : ");
 const databaseName = prompt("Enter database name : ");
 console.log(`Your host name is ${hostName} and user name is ${userName} and password is ${password} and database name ${databaseName}`)
 
-<<<<<<< HEAD
-const db_connection = mysqlc.createConnection({
-
-=======
 const db_connection = mysql.createConnection({
->>>>>>> 8eb59c914e5cdb34241ea82222cf70f51cc7fce9
+
         host:`${hostName}`,
         user:`${userName}`,
         password:`${password}`,
