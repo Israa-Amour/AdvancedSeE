@@ -4,12 +4,14 @@ var mysql      = require('mysql');
 // var path = require('path');
 // var moment = require('moment');
 // var storageFolderName = `${__dirname}\\UploadedFiles`
+const prompt = require("prompt-sync")({ sigint: true });
+
 const connection= require('./dbConnection');
 const DB_NAME = 'test';
-
-  dataToDB('Test 1','1')
-  getDataFromDB('Test1','1')
-  deleteData('1')
+const version = prompt("Enter version : ");
+  dataToDB('Test 2','1')
+  getDataFromDB('Test2','1')
+  deleteData(`${version}`)
 
 function getDataFromDB(File_Name,version){
     let select_query = `SELECT * from files where File_Name='${File_Name}' and version = '${version}' ORDER by File_ID desc LIMIT 1`;
