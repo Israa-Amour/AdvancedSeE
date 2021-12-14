@@ -11,7 +11,7 @@ const DB_NAME = 'test';
 const version = prompt("Enter version : ");
   dataToDB('Test 2','1')
   getDataFromDB('Test2','1')
-  deleteData(`${version}`)
+  version(`${version}`)
 
 
   
@@ -37,7 +37,7 @@ function dataToDB(File_Name,version){
     })
 }
 
-function deleteData(version){
+function versionControl(version){
     let delete_query = `DELETE FROM files  WHERE version !='${version}'`;
     connection.query(delete_query,(err, result) => {
         if (err){

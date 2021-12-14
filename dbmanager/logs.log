@@ -999,3 +999,33 @@
   service: 'user-service',
   timestamp: '2021-12-14T19:26:23.063Z'
 }
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-14T19:44:49.198Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-14T19:44:49.201Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-14T19:44:49.201Z'
+}
+{
+  level: 'info',
+  message: 'get files from db',
+  service: 'user-service',
+  timestamp: '2021-12-14T19:45:23.684Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-14T19:45:23.746Z'
+}

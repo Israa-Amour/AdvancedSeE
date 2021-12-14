@@ -19,7 +19,7 @@ const prompt = require("prompt-sync")({ sigint: true });
 
 
 
-const tableName = prompt("Enter file Path to import");
+const tableName = prompt("Enter table name  to manage");
 CSVtoSQL("ImportCSVFile/test.csv")
 //const File_Path = prompt("Enter file Path to import");
 //CSVtoSQL(ImportCSVFile/test.csv)
