@@ -12,13 +12,11 @@ const tableName = prompt("Enter table u want to export 0 if don't want to export
 if (tableName){
 
 var app = express();
-
-
+ 
 app.get('/export-csv',function(req,res){
   db.query(`SELECT * FROM ${tableName}`, function (err,files, fields) {
-
     if (err) throw err;
-    console.log("files:");
+  //  console.log('${tableName}:');
      
     const jsonfiles = JSON.parse(JSON.stringify(files));
     console.log(jsonfiles);
