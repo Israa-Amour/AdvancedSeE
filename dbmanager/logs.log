@@ -743,3 +743,26 @@
   service: 'user-service',
   timestamp: '2021-12-11T16:11:47.982Z'
 }
+{
+  level: 'error',
+  message: Error: Access denied for user 'root'@'localhost' (using password: YES)
+      at Packet.asError (C:\Users\IAmour\Desktop\lk\AdvancedSeE\dbmanager\node_modules\mysql2\lib\packets\packet.js:728:17)
+      at ClientHandshake.execute (C:\Users\IAmour\Desktop\lk\AdvancedSeE\dbmanager\node_modules\mysql2\lib\commands\command.js:29:26)
+      at Connection.handlePacket (C:\Users\IAmour\Desktop\lk\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:456:32)
+      at PacketParser.onPacket (C:\Users\IAmour\Desktop\lk\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:85:12)
+      at PacketParser.executeStart (C:\Users\IAmour\Desktop\lk\AdvancedSeE\dbmanager\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (C:\Users\IAmour\Desktop\lk\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:92:25)
+      at Socket.emit (events.js:315:20)
+      at addChunk (internal/streams/readable.js:309:12)
+      at readableAddChunk (internal/streams/readable.js:284:9)
+      at Socket.Readable.push (internal/streams/readable.js:223:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:188:23) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'root'@'localhost' (using password: YES)",
+    sql: undefined
+  },
+  service: 'user-service',
+  timestamp: '2021-12-13T20:10:29.883Z'
+}
