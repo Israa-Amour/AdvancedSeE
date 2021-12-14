@@ -51,5 +51,7 @@ exports.login = async (req,res,next) =>{
     }
     catch(err){
         next(err);
+         logger.log({ level: "error", message: err });
     }
+
 }

@@ -38,7 +38,7 @@ async function readCsvFile(filePath){
     connection.query(tableCheckQuery,(err, result) => {
         if (err){
             logger.log({ level: "error", message: err });
-            throw err;
+            throw new Error(err)
 
        }else{
            if(result.length > 0){
@@ -52,8 +52,8 @@ async function readCsvFile(filePath){
             (err, result) => {
                 if (err){
                     logger.log({ level: "error", message: err });
-                    throw err;
-               }else{
+                    throw new Error(err)
+                }else{
                 writeData(csvData,fileName,tableName,currentTimeinEpoch)
                }
             });
@@ -72,8 +72,8 @@ function writeData(data,fileName,tableName,currentTimeinEpoch){
              connection.query(sqlData,  (err, result) => {
                 if (err){
                     logger.log({ level: "error", message: err });
-                    throw err;
-               }else{
+                    throw new Error(err)
+                }else{
                    console.log(`SQL File Executed Successfully : ${currentTimeinEpoch}.sql`);
                }
             })
