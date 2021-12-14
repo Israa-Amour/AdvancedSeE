@@ -13,6 +13,8 @@ const version = prompt("Enter version : ");
   getDataFromDB('Test2','1')
   deleteData(`${version}`)
 
+
+  
 function getDataFromDB(File_Name,version){
     let select_query = `SELECT * from files where File_Name='${File_Name}' and version = '${version}' ORDER by File_ID desc LIMIT 1`;
     connection.query(select_query,(err, result) => {

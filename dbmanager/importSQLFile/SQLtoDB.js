@@ -1,4 +1,3 @@
-
 var mysql = require('mysql');
 var fs = require('fs');
 var path = require('path');
@@ -6,6 +5,7 @@ var moment = require('moment');
 const connection = require('.././dbConnection');
 const logger = require('.././logger')
 var DB_NAME = "dbmanager"
+
 
 connection.connect((err) => {
     if (!err)
@@ -16,6 +16,7 @@ connection.connect((err) => {
 
         
 });
+
 function writeData(filePath){
     console.log("file path....",filePath)
     let fileName = path.parse(filePath).name;
@@ -24,10 +25,13 @@ function writeData(filePath){
 
             let sqlData = fs.readFileSync(`${folderLocation}.sql`).toString();
              connection.query(sqlData,  (err, result) => {
-                if (err){
+                if (err)
+                {
                     logger.log({ level: "error", message: err });
                     throw err;
-               }else{
+               }
+               else
+               {
                    console.log(`Done`);
                }
             })  
