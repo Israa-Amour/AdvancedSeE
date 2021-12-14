@@ -11,25 +11,25 @@ const path = require('path')
 const db = require('./dbConnection');
 const { register } = require('./controllers/registerController');
 const routes = require('./routes');
-app.use(express.json());
 app.use(routes);
 const logger = require('./logger')
 const CSVtoSQL = require('./ImportCSVFile/CSVtoDb');
 const SQLtoDB = require('./importSQLFile/SQLtoDb');
-
 const prompt = require("prompt-sync")({ sigint: true });
 
 
 
 const tableName = prompt("Enter file Path to import");
 CSVtoSQL("ImportCSVFile/test.csv")
+//const File_Path = prompt("Enter file Path to import");
+//CSVtoSQL(ImportCSVFile/test.csv)
 
 db.connect((err) => {
     if (!err)
         console.log('DB Connected');
     else
-        console.log(err);
-        logger.log({ level: "error", message: err });
+    throw new Error(err)
+    logger.log({ level: "error", message: err });
 });
 
 //CSVtoSQL(File_Path)
@@ -44,8 +44,8 @@ app.get('/db/view', (req, res) => {
         
             res.send(rows)
         else
-            console.log(err);
-            logger.log({ level: "error", message: err });
+        throw new Error(err)
+        logger.log({ level: "error", message: err });
 
     
             
@@ -59,8 +59,8 @@ app.get('/db/user', (req, res) => {
         
             res.send(rows)
         else
-            console.log(err);
-            logger.log({ level: "error", message: err });
+        throw new Error(err)
+        logger.log({ level: "error", message: err });
     })
 });
 
@@ -71,7 +71,8 @@ app.delete('/db/delete/:id',(req,res)=>{
         if (!err)
             res.send(rows);
         else
-            console.log(err);
+        throw new Error(err)
+        logger.log({ level: "error", message: err });
     }); 
  });
 //Adding new file 
@@ -81,7 +82,7 @@ app.post('/db/add', (req, res) => {
         if (!err)
             res.send(rows);
         else{
-            console.log(err);
+            throw new Error(err)
             logger.log({ level: "error", message: err });
         }
     });
@@ -102,17 +103,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }))
  
- 
-db.connect(function (err) {
-    if (err) {
-        logger.log({ level: "error", message: err.message });
-        return console.error('error: ' + err.message);
-    }
-    console.log('Connected to the MySQL server.');
-})
- 
 
- 
 
 //// register and login
     // Handling Errors
@@ -126,6 +117,7 @@ db.connect(function (err) {
           message: err.message,
         });
     });
+
+
     
 /////////////////////////////////////////////////////////////
-

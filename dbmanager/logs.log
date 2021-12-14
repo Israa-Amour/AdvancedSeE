@@ -570,6 +570,11 @@
 }
 {
   level: 'error',
+<<<<<<< HEAD
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-10T12:40:09.261Z'
+=======
   message: Error: Access denied for user 'root'@'localhost' (using password: YES)
       at Packet.asError (C:\Users\DELL\Desktop\New folder (4)\AdvancedSeE\dbmanager\node_modules\mysql2\lib\packets\packet.js:728:17)
       at ClientHandshake.execute (C:\Users\DELL\Desktop\New folder (4)\AdvancedSeE\dbmanager\node_modules\mysql2\lib\commands\command.js:29:26)
@@ -590,24 +595,78 @@
   },
   service: 'user-service',
   timestamp: '2021-12-10T12:46:29.949Z'
+>>>>>>> 4b8da8a9b3a836dedfa368ac61be60943c1488d6
 }
 {
   level: 'error',
   message: null,
   service: 'user-service',
+<<<<<<< HEAD
+  timestamp: '2021-12-10T12:40:09.299Z'
+=======
   timestamp: '2021-12-10T12:46:49.074Z'
+>>>>>>> 4b8da8a9b3a836dedfa368ac61be60943c1488d6
 }
 {
   level: 'error',
   message: null,
   service: 'user-service',
+<<<<<<< HEAD
+  timestamp: '2021-12-10T12:56:23.784Z'
+=======
   timestamp: '2021-12-10T12:46:49.080Z'
+>>>>>>> 4b8da8a9b3a836dedfa368ac61be60943c1488d6
 }
 {
   level: 'error',
   message: null,
   service: 'user-service',
+<<<<<<< HEAD
+  timestamp: '2021-12-10T12:56:23.806Z'
+=======
   timestamp: '2021-12-10T12:46:49.080Z'
+>>>>>>> 4b8da8a9b3a836dedfa368ac61be60943c1488d6
+}
+{
+  level: 'error',
+  message: Error: Access denied for user 'root'@'localhost' (using password: YES)
+      at Packet.asError (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\node_modules\mysql2\lib\packets\packet.js:728:17)
+      at ClientHandshake.execute (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\node_modules\mysql2\lib\commands\command.js:29:26)
+      at Connection.handlePacket (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:456:32)
+      at PacketParser.onPacket (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:85:12)
+      at PacketParser.executeStart (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (C:\Users\DELL\Desktop\ADV PROJECT\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:92:25)
+      at Socket.emit (events.js:315:20)
+      at addChunk (internal/streams/readable.js:309:12)
+      at readableAddChunk (internal/streams/readable.js:284:9)
+      at Socket.Readable.push (internal/streams/readable.js:223:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:188:23) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'root'@'localhost' (using password: YES)",
+    sql: undefined
+  },
+  service: 'user-service',
+  timestamp: '2021-12-10T13:00:29.815Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-10T13:00:59.150Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-10T13:00:59.170Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-10T13:00:59.173Z'
 }
 {
   level: 'error',
@@ -745,6 +804,26 @@
 }
 {
   level: 'error',
+  message: Error: Access denied for user 'root'@'localhost' (using password: YES)
+      at Packet.asError (C:\Users\IAmour\Desktop\lk\AdvancedSeE\dbmanager\node_modules\mysql2\lib\packets\packet.js:728:17)
+      at ClientHandshake.execute (C:\Users\IAmour\Desktop\lk\AdvancedSeE\dbmanager\node_modules\mysql2\lib\commands\command.js:29:26)
+      at Connection.handlePacket (C:\Users\IAmour\Desktop\lk\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:456:32)
+      at PacketParser.onPacket (C:\Users\IAmour\Desktop\lk\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:85:12)
+      at PacketParser.executeStart (C:\Users\IAmour\Desktop\lk\AdvancedSeE\dbmanager\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (C:\Users\IAmour\Desktop\lk\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:92:25)
+      at Socket.emit (events.js:315:20)
+      at addChunk (internal/streams/readable.js:309:12)
+      at readableAddChunk (internal/streams/readable.js:284:9)
+      at Socket.Readable.push (internal/streams/readable.js:223:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:188:23) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'root'@'localhost' (using password: YES)",
+    sql: undefined
+  },
+  service: 'user-service',
+  timestamp: '2021-12-13T20:10:29.883Z'
   message: Error: connect ETIMEDOUT
       at Connection._handleTimeoutError (C:\Users\DELL\Desktop\New folder (4)\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:189:17)
       at listOnTimeout (node:internal/timers:556:17)
@@ -813,83 +892,4 @@
   service: 'user-service',
   timestamp: '2021-12-13T21:08:29.216Z'
 }
-{
-  level: 'error',
-  message: Error: connect ETIMEDOUT
-      at Connection._handleTimeoutError (C:\Users\DELL\Desktop\New folder (4)\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:189:17)
-      at listOnTimeout (node:internal/timers:556:17)
-      at processTimers (node:internal/timers:499:7) {
-    errorno: 'ETIMEDOUT',
-    code: 'ETIMEDOUT',
-    syscall: 'connect',
-    fatal: true
-  },
-  service: 'user-service',
-  timestamp: '2021-12-13T21:08:29.218Z'
-}
-{
-  level: 'error',
-  message: Error: Can't add new command when connection is in closed state
-      at Connection._addCommandClosedState (C:\Users\DELL\Desktop\New folder (4)\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:148:17)
-      at Connection.query (C:\Users\DELL\Desktop\New folder (4)\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:546:17)
-      at readCsvFile (C:\Users\DELL\Desktop\New folder (4)\AdvancedSeE\dbmanager\ImportCSVFile\CSVtoDb.js:38:16)
-      at processTicksAndRejections (node:internal/process/task_queues:93:5) {
-    fatal: true
-  },
-  service: 'user-service',
-  timestamp: '2021-12-13T21:08:29.239Z'
-}
-{
-  level: 'error',
-  message: null,
-  service: 'user-service',
-  timestamp: '2021-12-13T21:22:40.424Z'
-}
-{
-  level: 'error',
-  message: null,
-  service: 'user-service',
-  timestamp: '2021-12-13T21:22:40.428Z'
-}
-{
-  level: 'error',
-  message: null,
-  service: 'user-service',
-  timestamp: '2021-12-13T21:22:40.429Z'
-}
-{
-  level: 'error',
-  message: null,
-  service: 'user-service',
-  timestamp: '2021-12-14T16:28:26.515Z'
-}
-{
-  level: 'error',
-  message: null,
-  service: 'user-service',
-  timestamp: '2021-12-14T16:28:26.531Z'
-}
-{
-  level: 'error',
-  message: null,
-  service: 'user-service',
-  timestamp: '2021-12-14T16:28:26.532Z'
-}
-{
-  level: 'error',
-  message: null,
-  service: 'user-service',
-  timestamp: '2021-12-14T18:32:29.936Z'
-}
-{
-  level: 'error',
-  message: null,
-  service: 'user-service',
-  timestamp: '2021-12-14T18:32:29.943Z'
-}
-{
-  level: 'error',
-  message: null,
-  service: 'user-service',
-  timestamp: '2021-12-14T18:32:29.946Z'
-}
+

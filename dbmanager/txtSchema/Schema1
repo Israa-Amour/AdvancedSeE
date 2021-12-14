@@ -1,1 +1,1 @@
-[{"Field":"File_ID","Type":"int","Null":"NO","Key":"PRI","Default":null,"Extra":"auto_increment"},{"Field":"File_Name","Type":"varchar(50)","Null":"YES","Key":"","Default":null,"Extra":""}]
+[{"Field":"File_ID","Type":"int","Null":"NO","Key":"PRI","Default":null,"Extra":"auto_increment"},{"Field":"File_Name","Type":"varchar(45)","Null":"YES","Key":"","Default":null,"Extra":""}]

@@ -16,7 +16,7 @@ var app = express();
 app.get('/export-csv',function(req,res){
   db.query(`SELECT * FROM ${tableName}`, function (err,files, fields) {
     if (err) throw err;
-    console.log("files:");
+  //  console.log('${tableName}:');
      
     const jsonfiles = JSON.parse(JSON.stringify(files));
     console.log(jsonfiles);
@@ -30,7 +30,6 @@ app.get('/export-csv',function(req,res){
  
      res.setHeader("Content-Type", "text/csv");
      res.setHeader("Content-Disposition", `attachment; filename=${tableName}.csv`);
- 
      res.status(200).end(csv);
   
   });
