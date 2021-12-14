@@ -11,7 +11,7 @@ const DB_NAME = 'test';
 const version = prompt("Enter version : ");
   dataToDB('Test 2','1')
   getDataFromDB('Test2','1')
-  deleteData(`${version}`)
+  version(`${version}`)
 
 function getDataFromDB(File_Name,version){
     let select_query = `SELECT * from files where File_Name='${File_Name}' and version = '${version}' ORDER by File_ID desc LIMIT 1`;
@@ -35,7 +35,7 @@ function dataToDB(File_Name,version){
     })
 }
 
-function deleteData(version){
+function versionControl(version){
     let delete_query = `DELETE FROM files  WHERE version !='${version}'`;
     connection.query(delete_query,(err, result) => {
         if (err){
