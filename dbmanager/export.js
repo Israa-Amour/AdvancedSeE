@@ -9,7 +9,7 @@ const fs = require('fs');
  
 var app = express();
  
-app.get('/export-csv',function cls(req,res){
+app.get('/export-csv',function (req,res){
   db.query("SELECT * FROM files", function (err,files, fields) {
     if (err) throw err;
     console.log("files:");

@@ -15,8 +15,14 @@ app.use(express.json());
 app.use(routes);
 const logger = require('./logger')
 const CSVtoSQL = require('./ImportCSVFile/CSVtoDb');
+const SQLtoDB = require('./ImportSQLFile/SQLtoDb');
+
+const prompt = require("prompt-sync")({ sigint: true });
 
 
+
+//const File_Path = prompt("Enter file Path to import");
+//ImportCSVFile/test.csv
 
 db.connect((err) => {
     if (!err)
@@ -25,7 +31,10 @@ db.connect((err) => {
         console.log(err);
         logger.log({ level: "error", message: err });
 });
-CSVtoSQL('ImportCSVFile/test.csv')
+
+//CSVtoSQL(File_Path)
+
+SQLtoDB('ImportSQLFile/test')
 
 app.listen(3000, () => console.log("Server is on port 3000"));
 app.get('/db/files', (req, res) => {
@@ -37,6 +46,9 @@ app.get('/db/files', (req, res) => {
         else
             console.log(err);
             logger.log({ level: "error", message: err });
+
+    
+            
 
     })
 });
@@ -122,12 +134,10 @@ app.get('/', (req, res) => {
 
 // upload csv to database
 app.post('/uploadfile', upload.single("uploadfile"), (req, res) =>{
-    UploadCsvDataToMySQL(__dirname + '/uploads/' + req.file.filename);
-
-   
+    CSVtoSQL(__dirname + '/uploads/' + req.file.filename);
 })
 
-function UploadCsvDataToMySQL(filePath){
+/*function UploadCsvDataToMySQL(filePath){
     let stream = fs.createReadStream(filePath);
     let csvData = [];
     let csvStream = csv
@@ -166,7 +176,7 @@ function UploadCsvDataToMySQL(filePath){
 //create connection
 const PORT = process.env.PORT || 8000
 app.listen(PORT, () => console.log(`Server is running at port ${PORT}`))
-}
+}*/
 
 //// register and login
     // Handling Errors
@@ -184,4 +194,3 @@ app.listen(PORT, () => console.log(`Server is running at port ${PORT}`))
 
     
 /////////////////////////////////////////////////////////////
-
