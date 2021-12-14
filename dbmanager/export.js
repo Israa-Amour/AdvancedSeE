@@ -30,7 +30,6 @@ app.get('/export-csv',function(req,res){
  
      res.setHeader("Content-Type", "text/csv");
      res.setHeader("Content-Disposition", `attachment; filename=${tableName}.csv`);
- 
      res.status(200).end(csv);
   
   });

@@ -804,6 +804,26 @@
 }
 {
   level: 'error',
+  message: Error: Access denied for user 'root'@'localhost' (using password: YES)
+      at Packet.asError (C:\Users\IAmour\Desktop\lk\AdvancedSeE\dbmanager\node_modules\mysql2\lib\packets\packet.js:728:17)
+      at ClientHandshake.execute (C:\Users\IAmour\Desktop\lk\AdvancedSeE\dbmanager\node_modules\mysql2\lib\commands\command.js:29:26)
+      at Connection.handlePacket (C:\Users\IAmour\Desktop\lk\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:456:32)
+      at PacketParser.onPacket (C:\Users\IAmour\Desktop\lk\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:85:12)
+      at PacketParser.executeStart (C:\Users\IAmour\Desktop\lk\AdvancedSeE\dbmanager\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (C:\Users\IAmour\Desktop\lk\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:92:25)
+      at Socket.emit (events.js:315:20)
+      at addChunk (internal/streams/readable.js:309:12)
+      at readableAddChunk (internal/streams/readable.js:284:9)
+      at Socket.Readable.push (internal/streams/readable.js:223:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:188:23) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'root'@'localhost' (using password: YES)",
+    sql: undefined
+  },
+  service: 'user-service',
+  timestamp: '2021-12-13T20:10:29.883Z'
   message: Error: connect ETIMEDOUT
       at Connection._handleTimeoutError (C:\Users\DELL\Desktop\New folder (4)\AdvancedSeE\dbmanager\node_modules\mysql2\lib\connection.js:189:17)
       at listOnTimeout (node:internal/timers:556:17)
@@ -920,17 +940,96 @@
   level: 'error',
   message: null,
   service: 'user-service',
+<<<<<<< HEAD
   timestamp: '2021-12-14T08:30:28.175Z'
+=======
+  timestamp: '2021-12-14T08:21:49.441Z'
+>>>>>>> 8eb59c914e5cdb34241ea82222cf70f51cc7fce9
 }
 {
   level: 'error',
   message: null,
   service: 'user-service',
+<<<<<<< HEAD
   timestamp: '2021-12-14T08:30:28.185Z'
+=======
+  timestamp: '2021-12-14T08:21:49.444Z'
+>>>>>>> 8eb59c914e5cdb34241ea82222cf70f51cc7fce9
 }
 {
   level: 'error',
   message: null,
   service: 'user-service',
+<<<<<<< HEAD
   timestamp: '2021-12-14T08:30:28.185Z'
+=======
+  timestamp: '2021-12-14T08:21:49.444Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-14T08:38:16.341Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-14T08:38:16.345Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-14T08:38:16.346Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-14T10:23:14.207Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-14T10:23:14.211Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-14T10:23:14.211Z'
+}
+{
+  level: 'error',
+  message: Error: getaddrinfo ENOTFOUND localhosr
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:67:26) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'localhosr',
+    fatal: true
+  },
+  service: 'user-service',
+  timestamp: '2021-12-14T10:31:31.482Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-14T10:33:41.133Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-14T10:33:41.136Z'
+}
+{
+  level: 'error',
+  message: null,
+  service: 'user-service',
+  timestamp: '2021-12-14T10:33:41.137Z'
+>>>>>>> 8eb59c914e5cdb34241ea82222cf70f51cc7fce9
 }
