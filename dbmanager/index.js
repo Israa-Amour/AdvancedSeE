@@ -15,14 +15,14 @@ app.use(express.json());
 app.use(routes);
 const logger = require('./logger')
 const CSVtoSQL = require('./ImportCSVFile/CSVtoDb');
-const SQLtoDB = require('./ImportSQLFile/SQLtoDb');
+const SQLtoDB = require('./importSQLFile/SQLtoDb');
 
 const prompt = require("prompt-sync")({ sigint: true });
 
 
 
 //const File_Path = prompt("Enter file Path to import");
-//ImportCSVFile/test.csv
+//CSVtoSQL(ImportCSVFile/test.csv)
 
 db.connect((err) => {
     if (!err)
@@ -111,72 +111,8 @@ db.connect(function (err) {
     console.log('Connected to the MySQL server.');
 })
  
-//! Use of Multer
-var storage = multer.diskStorage({
-    destination: (req, file, callBack) => {
-        callBack(null, './uploads/')    
-    },
-    filename: (req, file, callBack) => {
-        callBack(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
-    }
-    
-})
+
  
-var upload = multer({
-    storage: storage
-});
- 
- 
-//route for Home page
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html');
-});
-
-// upload csv to database
-app.post('/uploadfile', upload.single("uploadfile"), (req, res) =>{
-    CSVtoSQL(__dirname + '/uploads/' + req.file.filename);
-})
-
-/*function UploadCsvDataToMySQL(filePath){
-    let stream = fs.createReadStream(filePath);
-    let csvData = [];
-    let csvStream = csv
-        .parse()
-        .on("data", function (data) {
-            csvData.push(data);
-        })
-        .on("end", function () {
-            // Remove Header ROW
-            csvData.shift();
-  
-            // Open the MySQL connection
-            db.connect((error) => {
-                if (error) {
-                    console.error(error);
-                } else {
-                    let query = 'INSERT INTO files (File_Name) VALUES ?';
-                    db.query(query, [csvData], (error, response) => {
-                        console.log(error || response);
-                        logger.log({ level: "error", message: error });
-
-                    });
-                }
-            });
-             
-            // delete file after saving to MySQL database
-            // -> you can comment the statement to see the uploaded CSV file.
-            fs.unlinkSync(filePath)
-        });
-  
-    stream.pipe(csvStream);
-
-    console.warn("data Saved");
-
-
-//create connection
-const PORT = process.env.PORT || 8000
-app.listen(PORT, () => console.log(`Server is running at port ${PORT}`))
-}*/
 
 //// register and login
     // Handling Errors
